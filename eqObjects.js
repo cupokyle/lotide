@@ -31,7 +31,9 @@ const eqObjects = function(object1, object2) {
       let currentKey = key;
       let currentMatch = false;
       for (let otherKey of Object.keys(object2)) {
-        console.log(currentKey, otherKey);
+        if (Array.isArray(object1[currentKey]) && Array.isArray(object2[otherKey]) && eqArrays(object1[currentKey], object2[otherKey])) {
+          currentMatch = true;
+        }
         if (currentKey === otherKey && object1[currentKey] === object2[currentKey]) {
           currentMatch = true;
         }
@@ -44,8 +46,8 @@ const eqObjects = function(object1, object2) {
   }
 };
 
-const ab = { a: "1", b: "2"};
-const ba = { b: "2", a: "1"};
+const ab = { ocean: "Pacific", a: "1", b: "2"};
+const ba = { b: "2", a: "1", ocean: "Pacific"};
 assertEqual(eqObjects(ab, ba), true);
 
 const abc = { a: "1", b: "2", c: "3"};
@@ -57,3 +59,7 @@ assertEqual(eqObjects(cd, dc), true); // => true
 
 const cd2 = { c: "1", d: ["2", 3, 4]};
 assertEqual(eqObjects(cd, cd2), false); // => false
+
+const bob = { hat: "Red", hair: "Black", kids: ["Susie", "Lisa"]};
+const jim = { kids: ["Susie", "Lisa"], hat: "Red", hair: "Black"};
+assertEqual(eqObjects(bob, jim), true);
