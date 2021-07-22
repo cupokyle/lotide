@@ -20,7 +20,7 @@ assertEqual(findKeyByValue({a:"john", b:"johnny", c:"johnathon", d:"j"}, "johnat
 assertEqual(findKeyByValue({a:1, b:2, c:3, d:"pineapple"}, "pineapple"), "d");
 
 const bestTVShowsByGenre = {
-  sci_fi: "The Expanse",
+  sciFi: "The Expanse",
   comedy: "Brooklyn Nine-Nine",
   drama:  "The Wire"
 };

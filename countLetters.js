@@ -17,8 +17,7 @@ const countLetters = function(string) {
       }
     }
   }
-  console.log(solution);
   return solution;
 };
 
-console.log(countLetters("kyle kyle kyle le kyle"));
+assertEqual(countLetters("kyle kyle kyle le kyle"), { k: 4, y: 4, l: 5, e: 5 });
