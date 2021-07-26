@@ -1,7 +1,7 @@
 const assertEqual = require('../assertEqual');
 const head = require('../head');
 
-//Tests
+//Test
 
 assertEqual(head([]), undefined);
 assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
