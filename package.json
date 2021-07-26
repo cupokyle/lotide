@@ -1,6 +1,6 @@
 {
   "name": "@cupokyle/lotide",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A miniature clone of the lodash library created as a part of the Lighthouse Labs Curriculum.",
   "main": "assertArraysEqual.js",
   "directories": {

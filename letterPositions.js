@@ -1,27 +1,4 @@
-const eqArrays = function(actual, expected) {
-  //If array lengths do not match, false.
-  if (actual.length !== expected.length) {
-    return false;
-  //If all items are not identical, false
-  }
-  for (let i = 0; i < actual.length; i++) {
-    if (actual[i] !== expected[i]) {
-      return false;
-    }
-  }
-  //If above conditions are not triggered, true.
-  return true;
-};
-
-const assertArraysEqual = function(array1, array2) {
-  if (eqArrays(array1, array2)) {
-    console.log(`✅✅✅ Assertion Passed: ${JSON.stringify(array1)} === ${JSON.stringify(array2)}`);
-  } else {
-    console.log(`❌❌❌ Assertion Failed: ${JSON.stringify(array1)} !== ${JSON.stringify(array2)}`);
-  }
-};
-
-
+const assertObjectsEqual = require('./assertObjectsEqual');
 
 const letterPositions = function(sentence) {
   const results = {};
@@ -34,15 +11,7 @@ const letterPositions = function(sentence) {
       }
     }
   }
-  console.log(results);
   return results;
 };
-
-//Tests
-
-// assertArraysEqual(letterPositions("hello").h, [0]);
-// assertArraysEqual(letterPositions("hello").e, [1]);
-// assertArraysEqual(letterPositions("hello").l, [2, 3]);
-// assertArraysEqual(letterPositions("hello").o, [4]);
 
 module.exports = letterPositions;
