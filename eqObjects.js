@@ -6,6 +6,8 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+//--------------------------------------------------------------------//
+
 const eqArrays = function(actual, expected) {
   //If array lengths do not match, false.
   if (actual.length !== expected.length) {
@@ -20,6 +22,8 @@ const eqArrays = function(actual, expected) {
   //If above conditions are not triggered, true.
   return true;
 };
+
+//-----------------------------------------------------------------------//
 
 
 const eqObjects = function(object1, object2) {
