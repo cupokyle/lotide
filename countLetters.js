@@ -20,6 +20,8 @@ const countLetters = function(string) {
   return solution;
 };
 
-assertEqual(countLetters("kyle kyle kyle le kyle"), { k: 4, y: 4, l: 5, e: 5 });
+//Test
+
+// assertEqual(countLetters("kyle kyle kyle le kyle"), { k: 4, y: 4, l: 5, e: 5 });
 
 module.exports = countLetters;

@@ -50,22 +50,24 @@ const eqObjects = function(object1, object2) {
   }
 };
 
-const ab = { ocean: "Pacific", a: "1", b: "2"};
-const ba = { b: "2", a: "1", ocean: "Pacific"};
-assertEqual(eqObjects(ab, ba), true);
+//Tests
 
-const abc = { a: "1", b: "2", c: "3"};
-assertEqual(eqObjects(ab, abc), false);
+// const ab = { ocean: "Pacific", a: "1", b: "2"};
+// const ba = { b: "2", a: "1", ocean: "Pacific"};
+// assertEqual(eqObjects(ab, ba), true);
 
-const cd = { c: "1", d: ["2", 3]};
-const dc = { d: ["2", 3], c: "1"};
-assertEqual(eqObjects(cd, dc), true); // => true
+// const abc = { a: "1", b: "2", c: "3"};
+// assertEqual(eqObjects(ab, abc), false);
 
-const cd2 = { c: "1", d: ["2", 3, 4]};
-assertEqual(eqObjects(cd, cd2), false); // => false
+// const cd = { c: "1", d: ["2", 3]};
+// const dc = { d: ["2", 3], c: "1"};
+// assertEqual(eqObjects(cd, dc), true); // => true
 
-const bob = { hat: "Red", hair: "Black", kids: ["Susie", "Lisa"]};
-const jim = { kids: ["Susie", "Lisa"], hat: "Red", hair: "Black"};
-assertEqual(eqObjects(bob, jim), true);
+// const cd2 = { c: "1", d: ["2", 3, 4]};
+// assertEqual(eqObjects(cd, cd2), false); // => false
+
+// const bob = { hat: "Red", hair: "Black", kids: ["Susie", "Lisa"]};
+// const jim = { kids: ["Susie", "Lisa"], hat: "Red", hair: "Black"};
+// assertEqual(eqObjects(bob, jim), true);
 
 module.exports = eqObjects;

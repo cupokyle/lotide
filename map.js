@@ -33,16 +33,18 @@ const map = function(array, callback) {
   return results;
 };
 
-const results1 = map(words, word => word[0]);
-assertArraysEqual((results1), ["y", "c", "a", "g", "w", "y", "w"]);
+//Tests
 
-const results2 = map(words, word => word.length);
-assertArraysEqual((results2), [3, 4, 6, 3, 4, 3, 4]);
+// const results1 = map(words, word => word[0]);
+// assertArraysEqual((results1), ["y", "c", "a", "g", "w", "y", "w"]);
 
-const results3 = map(words, word => word.toUpperCase());
-assertArraysEqual((results3), ["YOU", "CANT", "ALWAYS", "GET", "WHAT", "YOU", "WANT"]);
+// const results2 = map(words, word => word.length);
+// assertArraysEqual((results2), [3, 4, 6, 3, 4, 3, 4]);
 
-const results4 = map(words, word => word[0] + "up");
-assertArraysEqual((results4), ["yup", "cup", "aup", "gup", "wup", "yup", "wup"]);
+// const results3 = map(words, word => word.toUpperCase());
+// assertArraysEqual((results3), ["YOU", "CANT", "ALWAYS", "GET", "WHAT", "YOU", "WANT"]);
+
+// const results4 = map(words, word => word[0] + "up");
+// assertArraysEqual((results4), ["yup", "cup", "aup", "gup", "wup", "yup", "wup"]);
 
 module.exports = map;

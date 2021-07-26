@@ -35,13 +35,15 @@ const takeUntil = function(array, callback) {
   return results;
 };
 
-const results1 = takeUntil(myFriends, x => x.length === 3);
-const results2 = takeUntil(myFriends, x => x[x.length - 1] === "m");
+//Tests
 
-assertArraysEqual((results1), ["Benjamin", "Aaron", "Tiffany"]); //pass
-console.log("-----------");
-assertArraysEqual((results2), ["Benjamin", "Aaron", "Tiffany", "Moe", "Randall", "Lillian"]); // pass
-console.log("-----------");
-assertArraysEqual((results2), ["Benjamin", "Aaron", "Tiffany", "Moe", "Randall", "Lillian", "Jim"]); // fail
+// const results1 = takeUntil(myFriends, x => x.length === 3);
+// const results2 = takeUntil(myFriends, x => x[x.length - 1] === "m");
+
+// assertArraysEqual((results1), ["Benjamin", "Aaron", "Tiffany"]); //pass
+// console.log("-----------");
+// assertArraysEqual((results2), ["Benjamin", "Aaron", "Tiffany", "Moe", "Randall", "Lillian"]); // pass
+// console.log("-----------");
+// assertArraysEqual((results2), ["Benjamin", "Aaron", "Tiffany", "Moe", "Randall", "Lillian", "Jim"]); // fail
 
 module.exports = takeUntil;

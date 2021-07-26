@@ -16,38 +16,39 @@ const findKey = function(object, callback) {
   }
 };
 
+//Tests
 
-const result = findKey({
-  "Blue Hill": { stars: 1 },
-  "Akaleri":   { stars: 3 },
-  "noma":      { stars: 2 },
-  "elBulli":   { stars: 3 },
-  "Ora":       { stars: 2 },
-  "Akelarre":  { stars: 3 }
-}, x => x.stars === 2); // => "noma"
+// const result = findKey({
+//   "Blue Hill": { stars: 1 },
+//   "Akaleri":   { stars: 3 },
+//   "noma":      { stars: 2 },
+//   "elBulli":   { stars: 3 },
+//   "Ora":       { stars: 2 },
+//   "Akelarre":  { stars: 3 }
+// }, x => x.stars === 2); // => "noma"
 
-assertEqual((result), "noma");
+// assertEqual((result), "noma");
 
-const result2 = findKey({
-  "Blue Hill": { stars: 1 },
-  "Akaleri":   { stars: 3 },
-  "noma":      { stars: 2 },
-  "elBulli":   { stars: 3 },
-  "Ora":       { stars: 4 },
-  "Akelarre":  { stars: 3 }
-}, x => x.stars === 4); // => "Ora"
+// const result2 = findKey({
+//   "Blue Hill": { stars: 1 },
+//   "Akaleri":   { stars: 3 },
+//   "noma":      { stars: 2 },
+//   "elBulli":   { stars: 3 },
+//   "Ora":       { stars: 4 },
+//   "Akelarre":  { stars: 3 }
+// }, x => x.stars === 4); // => "Ora"
 
-assertEqual((result2), "Ora");
+// assertEqual((result2), "Ora");
 
-const result3 = findKey({
-  "Blue Hill": { stars: 1 },
-  "Akaleri":   { stars: 3 },
-  "noma":      { stars: 2 },
-  "elBulli":   { stars: 3 },
-  "Ora":       { stars: 2 },
-  "Akelarre":  { stars: 3 }
-}, x => x.stars === 5); // => undefined
+// const result3 = findKey({
+//   "Blue Hill": { stars: 1 },
+//   "Akaleri":   { stars: 3 },
+//   "noma":      { stars: 2 },
+//   "elBulli":   { stars: 3 },
+//   "Ora":       { stars: 2 },
+//   "Akelarre":  { stars: 3 }
+// }, x => x.stars === 5); // => undefined
 
-assertEqual((result3), undefined);
+// assertEqual((result3), undefined);
 
 module.exports = findKey;
