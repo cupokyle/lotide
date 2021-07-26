@@ -43,3 +43,5 @@ console.log("-----------");
 assertArraysEqual((results2), ["Benjamin", "Aaron", "Tiffany", "Moe", "Randall", "Lillian"]); // pass
 console.log("-----------");
 assertArraysEqual((results2), ["Benjamin", "Aaron", "Tiffany", "Moe", "Randall", "Lillian", "Jim"]); // fail
+
+module.exports = takeUntil;

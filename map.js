@@ -44,3 +44,5 @@ assertArraysEqual((results3), ["YOU", "CANT", "ALWAYS", "GET", "WHAT", "YOU", "W
 
 const results4 = map(words, word => word[0] + "up");
 assertArraysEqual((results4), ["yup", "cup", "aup", "gup", "wup", "yup", "wup"]);
+
+module.exports = map;

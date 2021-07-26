@@ -67,3 +67,5 @@ assertEqual(eqObjects(cd, cd2), false); // => false
 const bob = { hat: "Red", hair: "Black", kids: ["Susie", "Lisa"]};
 const jim = { kids: ["Susie", "Lisa"], hat: "Red", hair: "Black"};
 assertEqual(eqObjects(bob, jim), true);
+
+module.exports = eqObjects;
