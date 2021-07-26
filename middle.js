@@ -1,25 +1,4 @@
-const eqArrays = function(actual, expected) {
-  //If array lengths do not match, false.
-  if (actual.length !== expected.length) {
-    return false;
-  //If all items are not identical, false
-  }
-  for (let i = 0; i < actual.length; i++) {
-    if (actual[i] !== expected[i]) {
-      return false;
-    }
-  }
-  //If above conditions are not triggered, true.
-  return true;
-};
-
-const assertArraysEqual = function(array1, array2) {
-  if (eqArrays(array1, array2)) {
-    console.log(`✅✅✅ Assertion Passed: ${array1} === ${array2}`);
-  } else {
-    console.log(`❌❌❌ Assertion Failed: ${array1} !== ${array2}`);
-  }
-};
+const assertArraysEqual = require('./assertArraysEqual');
 
 const middle = function(array) {
   //Create new array
@@ -42,9 +21,4 @@ const middle = function(array) {
   return solution;
 };
 
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]);
-assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]);
-assertArraysEqual(middle(["Bob", "Peter", "Hank", 100, "Tom", "Lester"]), ["Hank", 100]);
-assertArraysEqual(middle([1, 1, 1]), [1]);
-assertArraysEqual(middle([2, 1]), []);
-
+module.exports = middle;
